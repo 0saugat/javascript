@@ -14,7 +14,7 @@ const checkPalindrome = () => {
       let letter = inputArr.pop();
       palinArr.push(letter);
     }
-    palinText = palinArr.join("");
+    const palinText = palinArr.join("");
     if (userInput === palinText) {
       resultText.innerText = `${currInput} is a palindrome`;
     } else {
