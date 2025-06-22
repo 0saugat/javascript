@@ -5,7 +5,7 @@ const resultText = document.getElementById("result");
 const checkPalindrome = () => {
   const currInput = inputText.value;
   if (currInput !== "") {
-    const regex = /[.,\s]/g;
+    const regex = /[^a-zA-Z0-9]/g;
     const userInput = currInput.replace(regex, "").toLowerCase();
     console.log(userInput);
     const inputArr = userInput.split("");
