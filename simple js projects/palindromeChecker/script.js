@@ -7,19 +7,13 @@ const checkPalindrome = () => {
   if (currInput !== "") {
     const regex = /[^a-zA-Z0-9]/g;
     const userInput = currInput.replace(regex, "").toLowerCase();
-    console.log(userInput);
-    const inputArr = userInput.split("");
-    const palinArr = [];
-    for (let i = inputArr.length - 1; i >= 0; i--) {
-      let letter = inputArr.pop();
-      palinArr.push(letter);
-    }
-    const palinText = palinArr.join("");
+    const palinText = userInput.split("").reverse().join("");
     if (userInput === palinText) {
       resultText.innerText = `${currInput} is a palindrome`;
     } else {
       resultText.innerText = `${currInput} is not a palindrome`;
     }
+    inputText.value = "";
   } else {
     alert("Please input a value");
   }
